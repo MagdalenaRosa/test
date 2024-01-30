@@ -1,0 +1,12 @@
+<div th:replace="~{fragments/main-menu}"></div>
+<form method="post" th:action="${action}">
+    <input name="name" placeholder="Product name"
+           th:value="${ product != null ? product.getName() : '' }"/>
+    <input name="price" placeholder="Product price"
+           th:value="${ product != null ? product.getPrice() : '' }" type="number"/>
+    <input name="imgUri" placeholder="Product img"
+           th:value="${ product != null ? product.getUrlUri() : '' }"/>
+    <textarea name="desc" placeholder="Product desc" rows="5"
+              th:text="${ product != null ? product.getDesc() : '' }"></textarea>
+    <button>Save</button>
+</form>

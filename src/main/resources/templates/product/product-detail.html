@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="~{fragments/main-menu}"></div>
+<p>
+    <img alt="" width="100" th:src="${product.getUrlUri()}"/>
+</p>
+<h1>
+    Details of
+    <span th:text="${product.getName()}"></span>
+</h1>
+<p>
+    Description:
+    <span th:text="${product.getDesc()}"></span>
+</p>
+<p>
+    Price:
+    <span th:text="${product.getPrice()}"></span> PLN
+</p>
+</body>
+</html>
